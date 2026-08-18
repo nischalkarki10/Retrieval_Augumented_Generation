@@ -94,7 +94,7 @@ def main():
     
     # Check if vector store already exists
     if os.path.exists(persistent_directory):
-        print("✅ Vector store already exists. No need to re-process documents.")
+        print(" Vector store already exists. No need to re-process documents.")
         
         embedding_model = HuggingFaceEmbeddings(
     model_name="sentence-transformers/all-MiniLM-L6-v2"
@@ -118,7 +118,7 @@ def main():
     # # Step 3: Create vector store
     vectorstore = create_vector_store(chunks, persistent_directory)
     
-    print("\n✅ Ingestion complete! Your documents are now ready for RAG queries.")
+    print("\n Ingestion complete! Your documents are now ready for RAG queries.")
     return vectorstore
 
 if __name__ == "__main__":
