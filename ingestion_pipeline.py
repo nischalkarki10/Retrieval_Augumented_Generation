@@ -68,7 +68,7 @@ def create_vector_store(chunks, persist_directory="db/chroma_db"):
     print("Creating embeddings and storing in ChromaDB...")
         
     embedding_model = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2"
+    model_name="sentence-transformers/all-MiniLM-L6-v2", device = "mps"
 )
     
     # Create ChromaDB vector store
